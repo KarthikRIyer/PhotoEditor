@@ -59,6 +59,7 @@ public class Add_Text_Activity extends AppCompatActivity implements ColorPickerD
             decorView.setSystemUiVisibility(uiOptions);
 
         setContentView(R.layout.activity_add__text_);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         ((SeekBar)findViewById(R.id.sizeBar)).setEnabled(false);
 
