@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.photoeditor.Add_Text_Activity">
+
+
+    <LinearLayout
+        android:id="@+id/view_drawing_pad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:transitionName="@string/transition_image"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dragMsg"
+        android:layout_width="85dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="8dp"
+        android:text="DRAG TO MOVE TEXT"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/addTextOption"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/save_changes_button"
+        android:layout_width="107dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/save_changes"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/saveOptionDraw"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/clearTextButton"
+        android:layout_width="100dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="44dp"
+        android:backgroundTint="@color/white"
+        android:text="Clear Text"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/save_changes_button"
+        app:layout_constraintEnd_toStartOf="@+id/save_changes_button"
+        app:layout_constraintStart_toEndOf="@+id/dragMsg" />
+
+    <EditText
+        android:id="@+id/enterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:hint="Enter Text"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/addTextOption"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_text_fields_white_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/saveOptionDraw"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_save_white_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelOptionDraw" />
+
+    <ImageView
+        android:id="@+id/cancelOptionDraw"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_cancel_white_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/colorOptionDraw"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_color_lens_white_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveOptionDraw" />
+
+    <SeekBar
+        android:id="@+id/sizeBar"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/colorOptionDraw"
+        app:layout_constraintStart_toEndOf="@+id/addTextOption" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/sizeBar"
+        app:layout_constraintStart_toStartOf="@+id/sizeBar" />
+
+</android.support.constraint.ConstraintLayout>

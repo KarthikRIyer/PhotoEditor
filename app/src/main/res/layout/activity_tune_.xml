@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.photoeditor.Tune_Activity">
+
+    <ImageView
+        android:id="@+id/tunedDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:transitionName="@string/transition_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <SeekBar
+        android:id="@+id/brightnessBar"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:progress="50"
+        app:layout_constraintBottom_toBottomOf="@+id/brightnessTitle"
+        app:layout_constraintEnd_toStartOf="@+id/resetBrightness" />
+
+    <SeekBar
+        android:id="@+id/contrastBar"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:progress="10"
+        app:layout_constraintBottom_toBottomOf="@+id/contrastTitle"
+        app:layout_constraintEnd_toStartOf="@+id/resetContrast" />
+
+    <SeekBar
+        android:id="@+id/saturationBar"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:max="512"
+        android:progress="256"
+        app:layout_constraintBottom_toBottomOf="@+id/saturationTitle"
+        app:layout_constraintEnd_toStartOf="@+id/resetSaturation" />
+
+    <TextView
+        android:id="@+id/brightnessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:text="Brightness"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/contrastTitle"
+        app:layout_constraintEnd_toStartOf="@+id/brightnessBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/contrastTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:text="Contrast"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/saturationTitle"
+        app:layout_constraintEnd_toStartOf="@+id/contrastBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/saturationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:text="Saturation"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveTuneIcon"
+        app:layout_constraintEnd_toStartOf="@+id/saturationBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/resetBrightness"
+        android:layout_width="52dp"
+        android:layout_height="28dp"
+        android:backgroundTint="@color/white"
+        android:text="Reset"
+        android:textColor="@color/black"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/brightnessBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/resetContrast"
+        android:layout_width="52dp"
+        android:layout_height="28dp"
+        android:backgroundTint="@color/white"
+        android:text="Reset"
+        android:textColor="@color/black"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/contrastBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/resetSaturation"
+        android:layout_width="52dp"
+        android:layout_height="28dp"
+        android:backgroundTint="@color/white"
+        android:text="Reset"
+        android:textColor="@color/black"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/saturationBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/cancelTuneIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_cancel_white_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/saveTuneIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_save_white_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelTuneIcon" />
+
+    <Button
+        android:id="@+id/save_changes_button_tune"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/save_changes"
+        android:textColor="@color/black"
+        android:textSize="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveTuneIcon" />
+</android.support.constraint.ConstraintLayout>

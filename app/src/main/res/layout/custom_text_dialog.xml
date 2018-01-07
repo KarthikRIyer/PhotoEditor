@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:id="@+id/add_text_on_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:lines="6"
+        android:focusable="true"
+        android:inputType="text"
+        >
+        <requestFocus/>
+    </EditText>
+
+
+</LinearLayout>

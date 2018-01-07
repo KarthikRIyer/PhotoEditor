@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cameraexample.Image_Display_Activity"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/view_drawing_pad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:transitionName="@string/transition_image"
+        >
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/emoji_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:padding="4dp"
+        android:src="@mipmap/ic_insert_emoticon_white_48dp" />
+
+    <ImageView
+        android:id="@+id/submit_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"
+        android:src="@mipmap/ic_done_white_48dp" />
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+        android:id="@+id/emojicon_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusableInTouchMode="false"
+        android:layout_toLeftOf="@+id/submit_btn"
+        android:layout_toRightOf="@+id/emoji_btn" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_above="@+id/submit_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"
+        android:text="@string/save_changes"
+        android:textSize="8sp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:id="@+id/clearEmojiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_above="@+id/saveButton"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/white"
+        android:text="Clear Emojis"
+        android:textColor="@color/black"
+        android:textSize="8sp" />
+
+    <SeekBar
+        android:id="@+id/sizeBar"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/emojicon_edit_text"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_toLeftOf="@+id/saveButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/emojicon_edit_text"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="2dp"
+        android:layout_toLeftOf="@+id/sizeBar"
+        android:text="Size"
+        android:textAlignment="center"
+        android:textSize="10sp" />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/cancelIcon"
+        android:src="@mipmap/ic_cancel_white_48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/emojicon_edit_text"
+        android:layout_marginLeft="8dp"
+        />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/saveIcon"
+        android:src="@mipmap/ic_save_white_48dp"
+        android:layout_toRightOf="@+id/cancelIcon"
+        android:layout_above="@+id/emojicon_edit_text"
+        android:layout_marginLeft="8dp"
+        />
+
+
+
+
+</RelativeLayout>

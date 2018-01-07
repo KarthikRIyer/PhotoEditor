@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/charcoalGrey</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorPrimary">@color/charcoalGrey</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:colorPrimaryDark">@color/darkGrey</item>
+        <item name="android:windowBackground">@color/lightBlue</item>
+        <item name="android:navigationBarColor">@color/charcoalGrey</item>
+    </style>
+    
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+
+    <style name="ImageDisplayTheme" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+    </style>
+    <style name="RotCropTheme" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+    </style>
+
+</resources>

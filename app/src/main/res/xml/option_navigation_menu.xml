@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_addText"
+        android:enabled="true"
+        android:icon="@mipmap/ic_format_color_text_white_24dp"
+        android:title="@string/add_text"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_draw"
+        android:enabled="true"
+        android:icon="@mipmap/paint_icon"
+        android:title="@string/draw_over"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_addEmoji"
+        android:enabled="true"
+        android:icon="@mipmap/ic_insert_emoticon_white_24dp"
+        android:title="@string/add_emoji"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_rotateCrop"
+        android:enabled="true"
+        android:icon="@mipmap/ic_crop_rotate_white_24dp"
+        android:title="@string/rotate_crop"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_tune"
+        android:enabled = "true"
+        android:icon="@mipmap/ic_tune_white_24dp"
+        android:title="Tune"
+        app:showAsAction="ifRoom"
+        />
+</menu>
