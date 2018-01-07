@@ -57,6 +57,7 @@ public class Draw_Activity extends AppCompatActivity implements ColorPickerDialo
             decorView.setSystemUiVisibility(uiOptions);
         }
         setContentView(R.layout.activity_draw_);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
         float targetW = getIntent().getExtras().getFloat("width");
